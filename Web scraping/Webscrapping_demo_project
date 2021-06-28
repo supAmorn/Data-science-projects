@@ -1,0 +1,143 @@
+# To add a new cell, type '# %%'
+# To add a new markdown cell, type '# %% [markdown]'
+# %% [markdown]
+# Using Webscraping to extract information on website
+
+# %%
+from typing import Text
+from selenium import webdriver
+from bs4 import BeautifulSoup
+import pandas as pd
+
+
+# %%
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
+
+# %%
+driver.get('https://www.classcentral.com/subject/data-science')
+content = driver.page_source
+soup = BeautifulSoup(content)
+
+
+# %%
+Course = []
+Duration = []
+Start_Date = []
+Offered_By = []
+No_Of_Reviews = []
+Rating = []
+
+
+# %%
+def find_2nd(string, substring):
+    return string.find(substring, string.find(substring) + 1)
+def find_1st(string, substring):
+    return string.find(substring, string.find(substring))
+
+
+# %%
+course = []
+for i in soup.findAll("span",{'class' : 'text-1 weight-semi line-tight'}):
+    b = str(i)
+    #print(b[find_1st(b,'>')+1:find_2nd(b,'<')])
+    course.append(b[find_1st(b,'>')+1:find_2nd(b,'<')])
+for i in course:
+    c = i.strip()
+    #print(c)
+    Course.append(c)
+
+
+# %%
+# Provider/Offered By:
+provider = []
+for i in soup.findAll('a',href=True, attrs={'class':'color-charcoal italic'}):
+    b = str(i)
+    #print(b[find_1st(b,'>')+1:find_2nd(b,'<')])
+    provider.append(b[find_1st(b,'>')+1:find_2nd(b,'<')])
+for i in provider:
+    p = i.strip()
+    Offered_By.append(p)
+
+
+# %%
+# rating:
+rat = []
+for d in soup.findAll('div', attrs={'class':'col border-box text-center nowrap row large-up-text-right padding-horz-small push'}):
+    abc = d.find('span', attrs={'class':'xlarge-up-hidden color-charcoal text-center'})
+    if abc is not None:
+        #print(rating.text)
+        rat.append(abc.text)
+    else:
+        rat.append('-1')
+for i in rat:
+    i = i.strip()
+    #print(i)
+    Rating.append(i)
+
+
+# %%
+# Num of Reviews
+num_reviews = []
+for i in soup.findAll("span",{'class' : 'large-down-hidden block line-tight text-4 color-gray'}):
+    b = str(i)
+    #print(b[find_1st(b,'>')+1:find_2nd(b,'<')])
+    no_rv =  b[find_1st(b,'>')+1:find_2nd(b,'<')]
+    if no_rv is not None:
+        num_reviews.append(no_rv) 
+    #else:
+    #    No_Of_Reviews.append('0')
+for i in num_reviews:
+    r = i.strip()
+    #print(i)
+    No_Of_Reviews.append(r) 
+
+
+# %%
+#Duration
+t = []
+for d in soup.findAll('div', attrs={'class':'small-down-text-2 text-3 row vert-align-middle'}):
+    find_dur = d.find('span',attrs={'class':'large-up-margin-left-xxsmall'})
+    if find_dur is not None:
+        t.append(find_dur.text)
+    else:
+        t.append('-1')
+duration = []
+for i in t:
+    i = i.strip()
+    #print(i)
+    duration.append(i)
+for i in duration:
+    i = ' '.join(i.split())
+    i = i.replace('\n','')
+    Duration.append(i)
+
+#Start date
+start_date = []
+for date in soup.findAll('td',attrs={'class':'hide-on-hover text-right text-2 color-charcoal width-3-16 large-down-hidden'}):
+    if date.text is not None:
+        start_date.append(date.text)
+    else:
+        start_date.append('-1')
+s_date = []
+for i in start_date:
+    s_date.append(i.strip())
+for i in s_date:
+    Start_Date.append(i.replace('\n',''))
+
+# %%
+import pandas as pd
+# Start_date Date only found 48 items out of 50
+# dfDS = pd.DataFrame({'course':Course,'ratings': Rating,'No_of_Reviews':No_Of_Reviews,
+#                  'provider':Offered_By, 'Duration':Duration,'Start_Date':Start_Date})
+dfDS = pd.DataFrame({'course':Course,'ratings': Rating,'No_of_Reviews':No_Of_Reviews,
+                 'provider':Offered_By, 'Duration':Duration})
+
+
+# %%
+dfDS
+
+

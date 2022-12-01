@@ -1,0 +1,21 @@
+total_cup_points,species,owner,country_of_origin,y,x,farm_name,producer,harvest_year,aroma,flavor,aftertaste,acidity,body,balance,color,altitude_mean_meters
+90.58,Arabica,metad plc,Ethiopia,9.145,40.4897,metad plc,METAD PLC,2014,8.67,8.83,8.67,8.75,8.5,8.42,Green,2075
+89.92,Arabica,metad plc,Ethiopia,9.145,40.4897,metad plc,METAD PLC,2014,8.75,8.67,8.5,8.58,8.42,8.42,Green,2075
+89.75,Arabica,grounds for health admin,Guatemala,15.7835,-90.2308,"san marcos barrancas ""san cristobal cuch",NA,2010,8.42,8.5,8.42,8.42,8.33,8.42,NA,1700
+89,Arabica,yidnekachew dabessa,Ethiopia,9.145,40.4897,yidnekachew dabessa coffee plantation,Yidnekachew Dabessa Coffee Plantation,2014,8.17,8.58,8.42,8.42,8.5,8.25,Green,2000
+88.83,Arabica,metad plc,Ethiopia,9.145,40.4897,metad plc,METAD PLC,2014,8.25,8.5,8.25,8.5,8.42,8.33,Green,2075
+88.83,Arabica,ji-ae ahn,Brazil,-14.235,-51.9253,NA,NA,2013,8.58,8.42,8.42,8.5,8.25,8.33,Bluish-Green,NA
+88.75,Arabica,hugo valdivia,Peru,-9.19,-75.0152,NA,HVC,2012,8.42,8.5,8.33,8.5,8.25,8.25,Bluish-Green,NA
+88.67,Arabica,ethiopia commodity exchange,Ethiopia,9.145,40.4897,aolme,Bazen Agricultural & Industrial Dev't Plc,2010,8.25,8.33,8.5,8.42,8.33,8.5,NA,1635
+88.42,Arabica,ethiopia commodity exchange,Ethiopia,9.145,40.4897,aolme,Bazen Agricultural & Industrial Dev't Plc,2010,8.67,8.67,8.58,8.42,8.33,8.42,NA,1635
+88.25,Arabica,diamond enterprise plc,Ethiopia,9.145,40.4897,tulla coffee farm,Diamond Enterprise Plc,2014,8.08,8.58,8.5,8.5,7.67,8.42,Green,1822.5
+83.75,Robusta,ankole coffee producers coop,Uganda,1.3733,32.2903,kyangundu cooperative society,Ankole coffee producers coop,2013,7.83,8.08,7.75,7.92,8.25,7.92,Green,1488
+83.5,Robusta,nishant gurjer,India,20.5937,78.9629,sethuraman estate kaapi royale,Nishant Gurjer Kaapi Royale,2017,8,7.75,7.92,8,7.92,7.92,NA,3170
+83.25,Robusta,andrew hetzel,India,20.5937,78.9629,sethuraman estate,Nishant Gurjer,2015,7.92,7.83,7.92,8,7.83,7.92,Green,1000
+83,Robusta,ugacof,Uganda,1.3733,32.2903,ugacof project area,UGACOF,2013,8,7.92,7.92,7.75,7.83,7.75,Green,1212
+83,Robusta,katuka development trust ltd,Uganda,1.3733,32.2903,katikamu capca farmers association,Katuka Development Trust Ltd,2013,8.33,7.83,7.83,7.75,8.25,7.75,Green,1250
+82.75,Robusta,andrew hetzel,India,20.5937,78.9629,NA,Sethuraman Estates,2012,8,7.92,7.67,8,7.75,7.92,Green,3000
+82.58,Robusta,andrew hetzel,India,20.5937,78.9629,sethuraman estates,Nishant Gurjer,2014,7.67,7.75,7.83,7.83,7.92,7.75,Green,750
+82.5,Robusta,nishant gurjer,India,20.5937,78.9629,sethuraman estate kaapi royale,Nishant Gurjer Kaapi Royale,2017,7.67,7.75,7.83,7.67,7.92,7.83,Bluish-Green,3140
+82.5,Robusta,nishant gurjer,India,20.5937,78.9629,sethuraman estate,Sethuraman Estate Kaapi Royale,2015,7.67,7.75,7.58,7.83,7.83,8,Green,1000
+82.42,Robusta,ugacof,Uganda,1.3733,32.2903,ishaka,Nsubuga Umar,2014,7.67,7.83,7.83,7.83,7.92,7.75,Green,1100

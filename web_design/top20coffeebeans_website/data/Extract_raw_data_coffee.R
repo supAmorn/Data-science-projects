@@ -1,0 +1,2 @@
+coffee_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-07/coffee_ratings.csv')
+write.csv(coffee_ratings,'/Users/both/Desktop/MDS/Information_visulisation/Assignment/Assignment_2/raw_coffee.csv')

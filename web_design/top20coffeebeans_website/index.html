@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Top 20 Coffee Ratings</title>
+		<meta charset="utf-8" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="fas fa-mug-hot"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Top 20 Best Coffee rating</h1>
+								<p>"These data were collected from the Coffee Quality Institute's review pages in January 2018."</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#Fun_Facts">Fun Facts</a></li>
+								<li><a href="#Overview">Overview</a></li>
+								<li><a href="#Criteria">Criteria</a></li>
+								<li><a href="#location">Location</a></li>	
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Fun_Facts -->
+							<article id="Fun_Facts">
+								<h2 class="major">Fun Facts</h2>
+								<span class="image main"><img src="images/fun_fact.jpg" alt="" /></span>
+								<h4>#Fact 1</h4>
+								<p>The two most economically important varieties of coffee plant are the <strong>Arabica</strong> and the <strong>Robusta </strong>.</p>
+								<h4>#Fact 2</h4>
+								<p><strong>Arabica</strong> beans consist of <strong>0.8–1.4%</strong> caffeine whereas <strong>Robusta</strong> beans consist of <strong>1.7–4%</strong> caffeine.</p>
+								<h4>#Fact 3</h4>
+								<p> <strong>~60%</strong> of the coffee produced worldwide is <strong>Arabica</strong> and <strong>~40%</strong> is <strong>Robusta</strong> . 
+								<br> Find our more detail comparison check out <a href="#Overview">Overview</a>.</p>
+								<h4>#Fact 4</h4>
+								<p> This site uses <strong>Coffee Quality Institute (CQI) </strong> to find out the top 20 best coffee beans from 2010 to 2018.
+								 Check their site <strong><a href="https://www.coffeeinstitute.org/">here</a></strong>.</p>
+
+								</article>
+
+						<!-- Score -->
+							<article id="Overview">
+								<h2 class="major">Overview</h2>
+								<span class="image main"><img src="images/score.jpg" alt="" /></span>
+								<canvas id="chart1" width="500" height="300"></canvas>
+								<canvas id="chart2" width="500" height="300"></canvas>
+								<br>
+								<h4>Information note</h4>
+								<p>This dataset has reduced from 1,339 raw datasets into 20 datasets. <br>Also, this site only selected Top 10 for Arabica and Top 10 for Robusta. </p>	
+							</article>
+
+						<!-- Criteria -->
+							<article id="Criteria">
+								<h2 class="major"> Coffee Beans Criteria</h2>
+								<span class="image main"><img src="images/criteria.jpg" alt="" /></span>
+								
+								<p><strong>Aroma</strong><br> Fleeting notes are reflected most clearly before the coffee is actually tasted.</p>
+								<p><strong>Flavor</strong><br> It is a synthesis of all acidity, aroma and body.</p>
+								<p><strong>After taste</strong><br> It is the resonant silence at the end of the piece.</p>
+								<p><strong>Acidity</strong><br> It should be distinguished from sour or astringent.</p>
+								<p><strong>Body</strong><br> It is the sense of heaviness, tactile richness, or thickness.</p>
+								<p><strong>Balance</strong><br> It describes a coffee that does not localize at any one point on the palate.</p>
+								<canvas id="chart3" width="500" height="300"></canvas>
+								<br>
+								<div class="selectBox" >
+									<select id="classCoffee"> 
+										<option value="Arabica1">METAD PLC_2014_1</option>
+										<option value="Arabica2">METAD PLC_2014_2</option>
+										<option value="Arabica3">GROUNDS FOR HEALTH ADMIN</option>
+										<option value="Arabica4">YIDNEKACHEW DABESSA</option>
+										<option value="Arabica5">METAD PLC_2014_3</option>
+										<option value="Arabica6">JI-AE AHN</option>
+										<option value="Arabica7">HUGO VALIDIVIA</option>
+										<option value="Arabica8">ETHIOPIA COMMODITY EXCHANGE_2010_1</option>
+										<option value="Arabica9">ETHIOPIA COMMODITY EXCHANGE_2010_2</option>
+										<option value="Arabica10">DIAMOND ENTERPRISE PLC</option>
+										<option value="Robusta1">ANKOLE COFFEE PRODUCERS COOP_2013</option>
+										<option value="Robusta2">NISHANT GURJER_2017</option>
+										<option value="Robusta3">ANDREW HETZEL_2015</option>
+										<option value="Robusta4">UGACOF_2013</option>
+										<option value="Robusta5">KATUKA DEVELOPMENT TRUST LTD</option>
+										<option value="Robusta6">ANDREW HETZEL_2012</option>
+										<option value="Robusta7">ANDREW HETZEL_2014</option>
+										<option value="Robusta8">NISHANT GURJER_2014</option>
+										<option value="Robusta9">NISHANT GURJER_2015</option>
+										<option value="Robusta10">UGACOF_2014</option>
+									</select>
+
+								</div>
+								<br>
+								<h4>Information note</h4>
+								<p>This site only selected 6 criteria out of 10 to show each score factors.</p>
+							</article>
+
+						<!-- Location -->
+							<article id="location">
+								<h2 class="major">Location</h2>
+								<span class="image main"><img src="images/location.jpg" alt="" /></span>
+								<p><strong>Countries with Top 10 Arabica and Top 10 Robusta</strong></p>
+								<div id="map" ></div>
+								<div class="map-overlay" id="legend"></div>
+								
+								
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Supanuth Amorntiyanggoon Student ID 1211674</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/coffee_chart.js"></script>
+			<script src="assets/js/coffee_map.js"></script>
+
+	</body>
+</html>

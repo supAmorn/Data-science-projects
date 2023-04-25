@@ -1,7 +1,7 @@
 # Melbourne Real estate project
  My practice Data science projects on AWS
 
-![My Image](../Users/both/Desktop/Screenshot 2023-04-25 at 16.31.07.png)
+<img width="896" alt="Screenshot 2023-04-25 at 16 31 07" src="https://user-images.githubusercontent.com/12016594/234194345-eb85ce59-de0f-42d6-9b73-cda37a388abe.png">
 
 
 The project is about predicting Melbourne real estate price using regression and develop the website the interact the price prediction.

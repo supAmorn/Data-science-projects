@@ -1,1 +1,2 @@
-This project is using beautifulsoup to extract information on website and transform the data into a table using pandas
+This project is using numpy and pandas for data extraction and transformation
+Using seaborn and matplotlib for data visualisation

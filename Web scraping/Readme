@@ -1,1 +1,3 @@
 This project is using beautifulsoup to extract information on website and transform the data into a table using pandas
+1. Google map POI api to extract unimelb building into pandas
+2. Using beautifualsoup to extract unimelb building stie into pandas and combine the function to further steps on OpenStreetMap
